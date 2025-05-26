@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="form-box">
+        <form #frm="ngForm" (ngSubmit)="calculate()">
+            <h2>Calculator</h2>
+            <label>Number 1</label>
+            <input type="number" name="number1" id="number1" [(ngModel)]="number1"/>
+
+            <label>Number 2</label>
+            <input type="number" name="number2" id="number2" [(ngModel)]="number2"/>
+
+            <div class="container-buttons">
+                <button type="submit">Plus</button>
+                <button type="button" (click)="reset()">Reset</button>
+            </div>
+
+        </form>
+
+        <div class="result-display" *ngIf="result">
+            <p>Result: 
+                <span id="result">{{ result }}</span>
+            </p>
+        </div>
+    </div>
+</div>
